@@ -23,4 +23,14 @@ fun main() {
 
     println("Nama Senjata: ${myWeapon.name}")
     println("Tier Senjata: ${myWeapon.tier}")
+
+    val player1 = Player("Kcirua")
+
+    println("Mendapatkan 50 XP...")
+    player1.addXp(50)
+    println("Level saat ini: ${player1.level}")
+
+    println("Mendapatkan 60 XP...")
+    player1.addXp(60)
+    println("Level saat ini: ${player1.level}")
 }
