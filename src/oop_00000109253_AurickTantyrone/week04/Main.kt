@@ -18,4 +18,13 @@ fun main() {
     mycars.accelerate()
     mycars.honk()
     mycars.openTrunk()
+
+    //////////////////
+    val myManager = Manager(name = "Aurick", baseSalary = 15000000)
+    myManager.work()
+    println("Bonus kepada ${myManager.name} sebesar: Rp ${myManager.calculateBonus()}")
+
+    val myDeveloper = Developer(name = "Tan", baseSalary = 8000000, programmingLanguage = "Kotlin")
+    myDeveloper.work()
+    println("Bonus kepada ${myDeveloper.name} sebesar: Rp ${myDeveloper.calculateBonus()}")
 }
