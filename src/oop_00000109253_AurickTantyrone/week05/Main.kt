@@ -12,7 +12,10 @@ fun main() {
         // Pemanggilan Runtime Polymorphism
         pegawai.bekerja()
 
-        // pegawai.mengajar() // INI AKAN ERROR karena tipe referensinya adalah Pegawai
+        // pegawai.mengajar() // INI AK
+        //
+        //
+        // AN ERROR karena tipe referensinya adalah Pegawai
         // Smart Casing dengan is dan when
         when (pegawai) {
             is Dosen -> {
