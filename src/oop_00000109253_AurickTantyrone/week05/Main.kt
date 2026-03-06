@@ -41,4 +41,21 @@ fun main() {
 
     val luasLingkaran = math.hitungLuas(7.0)
     println("Luas Lingkaran: $luasLingkaran")
+
+    /////////////////////////////////////
+    val myEWallet = EWallet(accountName = "Gopay User", balance = 500000.0)
+    val myCreditCard = CreditCard(accountName = "BCA Card", limit = 1100000.0)
+
+    val paymentList: List<PaymentMethod> = listOf(myEWallet, myCreditCard)
+
+    val tagihan = 755000.0
+    println("Tagihan saat ini: Rp $tagihan\n")
+
+    for (metode in paymentList) {
+        metode.processPayment(tagihan)
+        if (metode is EWallet) {
+            println("=> (Sistem mendeteksi ini adalah E-Wallet, memanggil fungsi khusus...)")
+            metode.topUp(300000.0)
+        }
+    }
 }
