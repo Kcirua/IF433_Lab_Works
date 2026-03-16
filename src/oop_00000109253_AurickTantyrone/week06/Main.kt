@@ -31,4 +31,15 @@ fun main() {
     println("- ${lampuKamar.name} (ID: ${lampuKamar.id})")
     println("- ${speakerDapur.name} (ID: ${speakerDapur.id})")
     println("- ${cctvGarasi.name} (ID: ${cctvGarasi.id})")
+
+    //////////////////////////////////////////
+    val hub = SmartHomeHub()
+
+    hub.addDevice(lampuKamar)
+    hub.addDevice(speakerDapur)
+    hub.addDevice(cctvGarasi)
+
+    hub.activateSecurityMode()
+
+    hub.turnOffAllSwitches()
 }
