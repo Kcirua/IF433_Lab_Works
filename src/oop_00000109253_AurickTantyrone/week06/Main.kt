@@ -19,4 +19,16 @@ fun main() {
     println("\n=== TESTING CHECKOUT ===")
     processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
+
+    /////////////////////////////////////////
+    val lampuKamar = SmartLamp(id = "Lampu1", name = "Kamar")
+
+    val speakerDapur = SmartSpeaker(id = "Speaker1", name = "JBL")
+
+    val cctvGarasi = SmartCCTV(id = "Camera1", name = "Canon")
+
+    println("Berhasil menginisialisasi 3 perangkat:")
+    println("- ${lampuKamar.name} (ID: ${lampuKamar.id})")
+    println("- ${speakerDapur.name} (ID: ${speakerDapur.id})")
+    println("- ${cctvGarasi.name} (ID: ${cctvGarasi.id})")
 }
