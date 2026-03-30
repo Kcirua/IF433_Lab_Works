@@ -46,4 +46,16 @@ fun main() {
     GameManager.startGame()
 
     println("Current Game Status: ${GameManager.isGameRunning}")
+
+    val legendaryChance = ItemRarity.LEGENDARY.dropChance
+    println("Drop Chance Item LEGENDARY: $legendaryChance%")
+
+    val myStarterWeapon = Weapon.forgeStarterSword()
+
+    println("Senjata Diterima: ${myStarterWeapon.item.name}")
+    println("Rarity: ${myStarterWeapon.item.rarity}")
+    println("Durability Awal: ${myStarterWeapon.durability}")
+
+    val myEpicWeapon = Weapon.forgeEpicSword()
+    println("Senjata Cadangan: ${myEpicWeapon.item.name} (Damage: ${myEpicWeapon.item.damage})")
 }
