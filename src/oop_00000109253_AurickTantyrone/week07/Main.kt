@@ -58,4 +58,23 @@ fun main() {
 
     val myEpicWeapon = Weapon.forgeEpicSword()
     println("Senjata Cadangan: ${myEpicWeapon.item.name} (Damage: ${myEpicWeapon.item.damage})")
+
+    val upgradedItem = myStarterWeapon.item.copy(
+        name = "Pedang Kayu Legendaris (Upgraded)",
+        damage = 25,
+        rarity = ItemRarity.RARE
+    )
+    println("Berhasil Upgrade! Damage lama: ${myStarterWeapon.item.damage} -> Baru: ${upgradedItem.damage}")
+
+    println("\nJalannya Pertualangan")
+
+    processEvent(BattleState.SafeZone)
+
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+
+    processEvent(BattleState.LootDropped(upgradedItem))
+
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
+
+    println("Status Engine Akhir: ${GameManager.isGameRunning}")
 }
