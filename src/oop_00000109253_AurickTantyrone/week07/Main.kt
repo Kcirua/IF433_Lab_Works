@@ -37,4 +37,13 @@ fun main() {
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     }
     println(uiMessage)
+
+    //////////////////////////////////////////////////////////////
+    println("Pemanggilan Pertama")
+    GameManager.startGame()
+
+    println("Pemanggilan Kedua")
+    GameManager.startGame()
+
+    println("Current Game Status: ${GameManager.isGameRunning}")
 }
