@@ -1,0 +1,12 @@
+package oop_00000109253_AurickTantyrone.week09
+
+fun main() {
+    val tradeHistory = listOf(
+        TradeLog(pair = "BTCUSDT", position = "Long", leverage = 20, roe = 45.5, status = "CLOSED"),
+        TradeLog(pair = "ETHUSDT", position = "Short", leverage = 10, roe = -12.3, status = "CLOSED"),
+        TradeLog(pair = "BTCUSDT", position = "Short", leverage = 50, roe = 110.0, status = "OPEN"),
+        TradeLog(pair = "SOLUSDT", position = "Long", leverage = 5, roe = -5.0, status = "CLOSED"),
+        TradeLog(pair = "ETHUSDT", position = "Long", leverage = 15, roe = 18.2, status = "OPEN"),
+        TradeLog(pair = "BTCUSDT", position = "Long", leverage = 25, roe = -8.7, status = "CLOSED")
+    )
+}
