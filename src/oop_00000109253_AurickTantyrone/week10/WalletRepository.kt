@@ -1,6 +1,6 @@
 package oop_00000109253_AurickTantyrone.week10
 
-class WalletRepository<T> {
+class WalletRepository<T : Searchable> {
     private val items = mutableListOf<T>()
 
     fun add(item: T) {

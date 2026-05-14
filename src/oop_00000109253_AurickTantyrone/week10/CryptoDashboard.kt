@@ -24,3 +24,5 @@ fun main() {
 
     println("Berhasil menambahkan ${txRepo.getAll().size} transaksi ke repositori.")
 }
+
+////
