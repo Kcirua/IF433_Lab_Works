@@ -10,4 +10,8 @@ class WalletRepository<T> {
     fun getAll(): List<T> {
         return items
     }
+
+    fun findByQuery(query: String): T? {
+        return items.find { it.searchKey.equals(query, ignoreCase = true) }
+    }
 }
