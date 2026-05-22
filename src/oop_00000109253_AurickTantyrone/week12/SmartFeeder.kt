@@ -12,4 +12,4 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     }
 
     return availableGram - requestedGram
-}
+}/
