@@ -1,5 +1,8 @@
 package oop_00000109253_AurickTantyrone.week13
 
+import java.io.File
+import java.io.FileNotFoundException
+
 data class TradeRecord(
     val id: Int,
     val symbol: String,
@@ -51,12 +54,12 @@ fun main() {
     )
 
     saveTrades(mockTrades, "crypto_trades.csv")
+
     File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
 
     val loadedData = loadTrades("crypto_trades.csv")
     val totalPnl = loadedData.sumOf { it.pnl }
 
-    println("=== HASIL LOAD TRADES ===")
     loadedData.forEach { println(it) }
-    println("\nTotal PnL Bersih: $totalPnl")
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
 }
